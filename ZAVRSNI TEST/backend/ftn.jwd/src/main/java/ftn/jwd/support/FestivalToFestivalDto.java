@@ -17,7 +17,7 @@ public class FestivalToFestivalDto implements Converter<Festival, FestivalDto> {
 		FestivalDto festivalDto = new FestivalDto();
 		
 		festivalDto.setId(festival.getId());
-		festivalDto.setNaziv(festival.getNaziv());
+		festivalDto.setName(festival.getName());
 		
 		return festivalDto;
 	}

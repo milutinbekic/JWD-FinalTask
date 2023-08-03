@@ -8,7 +8,7 @@ export const login = async function(username, password){
     }
 
     try{
-        const ret = await CinemaAxios.post('korisnici/auth',cred);
+        const ret = await CinemaAxios.post('users/auth',cred);
         const jwt_decoded = jwt_decode(ret.data);
         window.localStorage.setItem('jwt',ret.data);
         window.localStorage.setItem('role',jwt_decoded.role.authority);

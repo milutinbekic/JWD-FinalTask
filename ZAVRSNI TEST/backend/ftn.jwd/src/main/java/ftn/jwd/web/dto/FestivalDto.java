@@ -4,12 +4,12 @@ public class FestivalDto {
 	
 	private Long id;
 	
-	private String naziv;
+	private String name;
 
-	public FestivalDto(Long id, String naziv) {
+	public FestivalDto(Long id, String name) {
 		super();
 		this.id = id;
-		this.naziv = naziv;
+		this.name = name;
 	}
 
 	public FestivalDto() {
@@ -24,12 +24,12 @@ public class FestivalDto {
 		this.id = id;
 	}
 
-	public String getNaziv() {
-		return naziv;
+	public String getName() {
+		return name;
 	}
 
-	public void setNaziv(String naziv) {
-		this.naziv = naziv;
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	

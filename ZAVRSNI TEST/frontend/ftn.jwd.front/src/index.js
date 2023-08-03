@@ -7,9 +7,9 @@ import Login from './components/authorization/Login'
 
 import NotFound from './components/NotFound';
 import {logout} from './services/auth';
-import Izvodjaci from './components/izvodjaci/Izvodjaci';
-import Nastupi from './components/nastupi/Nastupi';
-import NastupAdd from './components/nastupi/NastupAdd';
+import Artists from './components/artists/Artists';
+import Performances from './components/performances/Performances';
+import AddPerformance from './components/performances/AddPerformance';
 
 const App = () => {
 
@@ -24,11 +24,11 @@ const App = () => {
                         JWD
                     </Navbar.Brand>
                     <Nav>
-                        <Nav.Link as={Link} to="/izvodjaci">
-                            Izvodjaci
+                        <Nav.Link as={Link} to="/artists">
+                            Artists
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/nastupi">
-                            Nastupi
+                        <Nav.Link as={Link} to="/performances">
+                            Performances
                         </Nav.Link>
                         <Button onClick={()=>logout()}>Logout</Button>:
                     </Nav>
@@ -37,9 +37,9 @@ const App = () => {
                 <Container style={{paddingTop:"10px"}}>
                 <Routes>
                     <Route path="/" element={<Home/>} />
-                    <Route path="/izvodjaci" element={<Izvodjaci/>} />
-                    <Route path="/nastupi" element={<Nastupi/>} />
-                    <Route path="/nastupi/add" element={<NastupAdd/>} />
+                    <Route path="/artists" element={<Artists/>} />
+                    <Route path="/performances" element={<Performances/>} />
+                    <Route path="/performances/add" element={<AddPerformance/>} />
                     <Route path="*" element={<NotFound/>} />
                 </Routes>
                 </Container>
@@ -55,8 +55,8 @@ const App = () => {
                         JWD
                     </Navbar.Brand>
                     <Nav>
-                    <Nav.Link as={Link} to="/nastupi">
-                            Nastupi
+                    <Nav.Link as={Link} to="/performances">
+                            Performances
                         </Nav.Link>
                         <Nav.Link as={Link} to="/login">
                             Login
@@ -67,7 +67,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/login" element={<Login/>}/>
-                    <Route path="/nastupi" element={<Nastupi/>} />
+                    <Route path="/performances" element={<Performances/>} />
                     <Route path="*" element={<Navigate replace to = "/login"/>}/>
                 </Routes>
                 </Container>

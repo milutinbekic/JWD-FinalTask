@@ -9,6 +9,7 @@ function Login() {
     const navigate = useNavigate()
 
     return(
+        <Col>
         <Row className="justify-content-center">
             <Col md={6}>
             <Form>
@@ -24,6 +25,18 @@ function Login() {
             <Button onClick={()=>{login(username, password); navigate("/")}}>Log in</Button>
             </Col>
         </Row>
+        <br/>
+        <br/>
+        <br/>
+        <Row className="justify-content-center">
+            <Col md={6}>
+                    <u>ZA TESTIRANJE APLIKACIJE!</u><br/><br/>
+                
+                    <u>ADMIN</u> - username: <strong>miroslav</strong>, password: <strong>miroslav</strong><br/>
+                    <u>USER</u> - username: <strong>tamara</strong>, password: <strong>tamara</strong><br/>
+            </Col>
+        </Row>
+        </Col>
     )
 }
 

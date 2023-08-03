@@ -18,7 +18,7 @@ import ftn.jwd.support.FestivalToFestivalDto;
 import ftn.jwd.web.dto.FestivalDto;
 
 @RestController
-@RequestMapping(value = "/api/festivali", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api/festivals", produces = MediaType.APPLICATION_JSON_VALUE)
 @Validated
 public class FestivalController {
 	
@@ -32,11 +32,11 @@ public class FestivalController {
 	@GetMapping
 	public ResponseEntity<List<FestivalDto>> getAll(){
 		List<Festival> festivali = festivalService.findAll();
-		List<FestivalDto> festivaliDto = new ArrayList<>();
+		List<FestivalDto> festivalsDto = new ArrayList<>();
 		for(Festival s: festivali) {
-			festivaliDto.add(festivalToFestivalDto.convert(s));
+			festivalsDto.add(festivalToFestivalDto.convert(s));
 		}
-		return new ResponseEntity<>(festivaliDto, HttpStatus.OK);
+		return new ResponseEntity<>(festivalsDto, HttpStatus.OK);
 	}
 
 }

@@ -68,9 +68,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.and().authorizeRequests().anyRequest().permitAll();
 				/*.and()
 				.authorizeRequests()
-				.antMatchers(HttpMethod.POST, "/api/korisnici/auth")
+				.antMatchers(HttpMethod.POST, "/api/users/auth")
 					.permitAll()
-				 .antMatchers(HttpMethod.GET, "/api/filmovi")
+				 .antMatchers(HttpMethod.GET, "/api/artists")
 					 .permitAll()
 				.anyRequest().authenticated();*/
 
@@ -83,7 +83,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	public static class WebConfig implements WebMvcConfigurer {
 		@Override
 		public void addCorsMappings(CorsRegistry registry) {
-			/*registry.addMapping("/api/filmovi")
+			/*registry.addMapping("/api/artists")
 					.allowedOrigins("http://localhost:3000")
 					.allowedMethods("OPTIONS", "HEAD", "GET", "PUT", "POST", "DELETE", "PATCH")
 					.allowCredentials(true)
